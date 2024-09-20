@@ -2,14 +2,14 @@
 #include <vector>
 using namespace std;
 
-void swap(vector<int> &arr, int pos_i, int pos_j){
-    int temp = arr[pos_i];
+void swap(vector<float> &arr, int pos_i, int pos_j){
+    float temp = arr[pos_i];
     arr[pos_i] = arr[pos_j];
     arr[pos_j] = temp;
 }
 
 
-void bubbleSort(vector<int>& arr){
+void bubbleSort(vector<float>& arr){
     for(int i = 0; i < arr.size() - 1; i++){
         for(int j = i ; j < arr.size(); j ++){
             if(arr[i] > arr[j])
@@ -18,7 +18,7 @@ void bubbleSort(vector<int>& arr){
     }
 }
 
-void sortArray(vector<int> &arr){
+void sortArray(vector<float> &arr){
     bubbleSort(arr);  
     for(int i = 0; i < arr.size(); i++){
         cout << arr[i] << " ";
@@ -27,14 +27,10 @@ void sortArray(vector<int> &arr){
 }
 
 int main(){
-    vector<int> arr;
-    int cases; cin >> cases;
-    for(int i = 0; i < cases; i++){
-        int number; cin >> number;
+    vector<float> arr;
+    float number;
+    while(cin >> number){
         arr.push_back(number);
-    }
-
+    } 
     sortArray(arr);
-    
-
 }

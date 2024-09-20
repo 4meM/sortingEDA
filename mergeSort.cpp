@@ -5,12 +5,12 @@ using namespace std;
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(vector<int>& arr, int left, 
+void merge(vector<float>& arr, int left, 
                      int mid, int right)
 {
     int n1 = mid - left + 1;
     int n2 = right - mid;
-    vector<int> L(n1), R(n2);
+    vector<float> L(n1), R(n2);
     
     for (int i = 0; i < n1; i++)
         L[i] = arr[left + i];
@@ -45,7 +45,7 @@ void merge(vector<int>& arr, int left,
     }
 }
 
-void mergeSort(vector<int>& arr, int left, int right)
+void mergeSort(vector<float>& arr, int left, int right)
 {
     if (left >= right)
         return;
@@ -56,7 +56,7 @@ void mergeSort(vector<int>& arr, int left, int right)
     merge(arr, left, mid, right);
 }
 
-void printVector(vector<int>& arr)
+void printVector(vector<float>& arr)
 {
     mergeSort(arr, 0, arr.size() - 1);
     for (int i = 0; i < arr.size(); i++)
@@ -66,8 +66,11 @@ void printVector(vector<int>& arr)
 
 int main()
 {
-    vector<int> arr = { 12, 11, 13, 5, 6, 7 };
-    int n = arr.size();
+    vector<float> arr;
+    float number; 
+    while(cin >> number){
+        arr.push_back(number);
+    }
     printVector(arr);
     return 0;
 }

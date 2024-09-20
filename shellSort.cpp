@@ -1,13 +1,14 @@
 #include  <iostream>
+#include <vector>
 using namespace std;
 
-int shellSort(int arr[], int n)
+int shellSort(vector<float> &arr)
 {
-    for (int gap = n/2; gap > 0; gap /= 2)
+    for (int gap = arr.size()/2; gap > 0; gap /= 2)
     {
-        for (int i = gap; i < n; i += 1)
+        for (int i = gap; i < arr.size(); i += 1)
         {
-            int temp = arr[i];
+            float temp = arr[i];
             int j;            
             for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
                 arr[j] = arr[j - gap];
@@ -17,19 +18,20 @@ int shellSort(int arr[], int n)
     return 0;
 }
 
-void printArray(int arr[], int n)
+void printArray(vector<float> & arr)
 {
-    shellSort(arr, n);
-    for (int i=0; i<n; i++)
+    shellSort(arr);
+    for (int i=0; i< arr.size(); i++)
         cout << arr[i] << " ";
 }
 
 int main()
 {
-    int arr[] = {12, 34, 54, 2, 3}, i;
-    int n = sizeof(arr)/sizeof(arr[0]);
-
-    printArray(arr, n);
-
+    vector<float> arr;
+    float number;
+    while(cin >> number){
+        arr.push_back(number);
+    }
+    printArray(arr);
     return 0;
 }

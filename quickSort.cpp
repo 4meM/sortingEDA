@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int partition(vector<int> &arr, int low, int high) {
-    int pivot = arr[high];
+int partition(vector<float> &arr, int low, int high) {
+    float pivot = arr[high];
     int i = (low - 1);
 
     for (int j = low; j <= high - 1; j++) {
@@ -15,7 +15,7 @@ int partition(vector<int> &arr, int low, int high) {
     return (i + 1);
 }
 
-void quickSort(vector<int> &vec, int low, int high) {
+void quickSort(vector<float> &vec, int low, int high) {
 
     if (low < high) {
         int pi = partition(vec, low, high);
@@ -26,9 +26,12 @@ void quickSort(vector<int> &vec, int low, int high) {
 }
 
 int main() {
-    vector<int> vec = {10, 7, 8, 9, 1, 5};
-    int n = vec.size();
-    quickSort(vec, 0, n - 1);
+    vector<float> vec; 
+    float number;
+    while(cin >> number){
+        vec.push_back(number);
+    }
+    quickSort(vec, 0, vec.size() - 1);
     for (auto i : vec) {
         cout << i << " ";
     }

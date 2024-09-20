@@ -8,8 +8,6 @@ void swap(vector<int> &arr, int pos_i, int pos_j){
     arr[pos_j] = temp;
 }
 
-
-
 void selectionSort(vector<int> &arr){
     for(int i = 0; i < arr.size() - 1; i ++){
         int menor = arr[i];
