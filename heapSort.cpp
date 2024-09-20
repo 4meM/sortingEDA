@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void heapify(int arr[], int N, int i)
+void heapify(vector<float>& arr, int N, int i)
 {
     int largest = i;
     int l = 2 * i + 1;
@@ -17,7 +17,7 @@ void heapify(int arr[], int N, int i)
     }
 }
 
-void heapSort(int arr[], int N)
+void heapSort(vector<float>& arr, int N)
 {
     for (int i = N / 2 - 1; i >= 0; i--)
         heapify(arr, N, i);
@@ -27,7 +27,7 @@ void heapSort(int arr[], int N)
     }
 }
 
-void printArray(int arr[], int N)
+void printArray(vector<float>& arr, int N)
 {
     heapSort(arr,N);
     for (int i = 0; i < N; ++i)
@@ -37,7 +37,10 @@ void printArray(int arr[], int N)
 
 int main()
 {
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
-    int N = sizeof(arr) / sizeof(arr[0]);
-    printArray(arr, N);
+    vector<float> arr;
+    float number;
+    while(cin >> number){
+        arr.push_back(number);
+    }
+    printArray(arr, arr.size());
 }

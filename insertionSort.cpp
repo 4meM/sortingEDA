@@ -2,17 +2,17 @@
 #include <vector>
 using namespace std;
 
-void swap(vector<int> &arr, int pos_i, int pos_j){
-    int temp = arr[pos_i];
+void swap(vector<float> &arr, int pos_i, int pos_j){
+    float temp = arr[pos_i];
     arr[pos_i] = arr[pos_j];
     arr[pos_j] = temp;
 }
 
 
 
-void insertionSort(vector<int> &arr){
+void insertionSort(vector<float> &arr){
     for(int i = 0; i < arr.size() - 1; i ++){
-        int menor = arr[i];
+        float menor = arr[i];
         int pos = i;
         for(int j = i + 1; j < arr.size(); j ++){
             if(menor > arr[j]){
@@ -24,7 +24,7 @@ void insertionSort(vector<int> &arr){
     }
 }
 
-void sortArray(vector<int> &arr){
+void sortArray(vector<float> &arr){
     insertionSort(arr);  
     for(int i = 0; i < arr.size(); i++){
         cout << arr[i] << " ";
@@ -35,10 +35,9 @@ void sortArray(vector<int> &arr){
 
 int main(){
 
-    vector<int> arr;
-    int cases; cin >> cases;
-    for(int i = 0; i < cases; i++){
-        int number; cin >> number;
+    vector<float> arr;
+    float number;
+    while(cin >> number){
         arr.push_back(number);
     }
     sortArray(arr);
