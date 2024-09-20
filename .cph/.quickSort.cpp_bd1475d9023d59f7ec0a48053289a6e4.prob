@@ -1,0 +1,1 @@
+{"name":"Local: quickSort","url":"/home/lab1cs10/sorting_4meM/quickSort.cpp","tests":[{"id":1726849829216,"input":"","output":"1 5 7 8 9 10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lab1cs10/sorting_4meM/quickSort.cpp","group":"local","local":true}

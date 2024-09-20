@@ -1,0 +1,1 @@
+{"name":"Local: heapSort","url":"/home/lab1cs10/sorting_4meM/heapSort.cpp","tests":[{"id":1726850038954,"input":"","output":"5 6 7 11 12 13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lab1cs10/sorting_4meM/heapSort.cpp","group":"local","local":true}
