@@ -1,0 +1,1 @@
+{"name":"Local: shellSort","url":"/home/lab1cs10/sorting_4meM/shellSort.cpp","tests":[{"id":1726850503661,"input":"","output":"2 3 12 34 54"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lab1cs10/sorting_4meM/shellSort.cpp","group":"local","local":true}
