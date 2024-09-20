@@ -1,0 +1,1 @@
+{"name":"Local: selectionSort","url":"/home/lab1cs10/sorting_4meM/selectionSort.cpp","tests":[{"id":1726848466935,"input":"4\n1 5 8 2","output":"1 2 5 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lab1cs10/sorting_4meM/selectionSort.cpp","group":"local","local":true}
